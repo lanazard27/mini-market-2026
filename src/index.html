@@ -1,114 +1,99 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.3">
-  <style type="text/css">
-    span.s1 {font-kerning: none}
-  </style>
-</head>
-<body>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1">&lt;!doctype html&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1">&lt;html lang="ko"&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">  </span>&lt;head&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8" /&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Mini Market (학습용)&lt;/title&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="styles.css" /&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/head&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">  </span>&lt;body&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!--</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>이 페이지는 "학습용 미니 마켓"입니다.</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>목표:</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>1) 상품 목록을 보여준다</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>2) 검색/카테고리 필터가 된다</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>3) 장바구니에 담고 수량을 바꾸고 삭제한다</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>4) 주문(가짜)을 저장한다(localStorage)</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>--&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>&lt;header class="header"&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="logo"&gt;🛒 Mini Market&lt;/div&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="search-area"&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- JS가 이 id로 검색창을 찾습니다 --&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">          </span>id="searchInput"</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">          </span>class="input"</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">          </span>type="text"</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">          </span>placeholder="상품 검색 (예: 사과)"</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>/&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- JS가 이 id로 카테고리 선택을 찾습니다 --&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;select id="categorySelect" class="select"&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">          </span>&lt;option value="ALL"&gt;전체&lt;/option&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">          </span>&lt;option value="FRUIT"&gt;과일&lt;/option&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">          </span>&lt;option value="DRINK"&gt;음료&lt;/option&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">          </span>&lt;option value="SNACK"&gt;과자&lt;/option&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">          </span>&lt;option value="DAILY"&gt;생활&lt;/option&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- 장바구니 열기 버튼 --&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;button id="openCartBtn" class="btn"&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>장바구니 &lt;span id="cartCount" class="badge"&gt;0&lt;/span&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/button&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>&lt;main class="container"&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;section class="hero"&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h1 class="title"&gt;오늘의 상품&lt;/h1&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="desc"&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">          </span>실제 결제는 없고, 주문 내역은 브라우저에만 저장돼요.</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/section&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- 상품 카드가 그려질 영역 --&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;section id="productGrid" class="grid"&gt;&lt;/section&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- 주문 내역 영역 --&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;section class="orders"&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="orders-head"&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">          </span>&lt;h2 class="subtitle"&gt;최근 주문 내역(학습용)&lt;/h2&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">          </span>&lt;button id="clearOrdersBtn" class="btn ghost"&gt;주문 내역 지우기&lt;/button&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="ordersList" class="orders-list"&gt;&lt;/div&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/section&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- 장바구니 드로어(오른쪽에서 나오는 패널) --&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>&lt;aside id="cartDrawer" class="drawer hidden"&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="drawer-head"&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="subtitle"&gt;장바구니&lt;/h2&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button id="closeCartBtn" class="btn ghost"&gt;닫기&lt;/button&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- 장바구니 아이템이 들어갈 영역 --&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div id="cartItems" class="cart-items"&gt;&lt;/div&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="drawer-foot"&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="total"&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span&gt;총 합계&lt;/span&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">          </span>&lt;strong id="cartTotal"&gt;0원&lt;/strong&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button id="checkoutBtn" class="btn primary"&gt;주문하기(가짜)&lt;/button&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button id="clearCartBtn" class="btn ghost"&gt;장바구니 비우기&lt;/button&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="hint"&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">          </span>팁: 새로고침해도 장바구니가 남아있는 이유는 localStorage 때문이에요.</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/aside&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- 화면 아래에 잠깐 뜨는 알림 --&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="toast" class="toast hidden"&gt;&lt;/div&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- JS는 body 끝에서 불러오면, 화면이 먼저 만들어지고 실행돼서 안정적 --&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="app.js"&gt;&lt;/script&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/body&gt;</span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px AppleMyungjo; -webkit-text-stroke: #000000"><span class="s1">&lt;/html&gt;</span></h1>
-</body>
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Market (학습용)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--
+      이 페이지는 "학습용 미니 마켓"입니다.
+      목표:
+      1) 상품 목록을 보여준다
+      2) 검색/카테고리 필터가 된다
+      3) 장바구니에 담고 수량을 바꾸고 삭제한다
+      4) 주문(가짜)을 저장한다(localStorage)
+    -->
+
+    <header class="header">
+      <div class="logo">🛒 Mini Market</div>
+
+      <div class="search-area">
+        <!-- JS가 이 id로 검색창을 찾습니다 -->
+        <input
+          id="searchInput"
+          class="input"
+          type="text"
+          placeholder="상품 검색 (예: 사과)"
+        />
+
+        <!-- JS가 이 id로 카테고리 선택을 찾습니다 -->
+        <select id="categorySelect" class="select">
+          <option value="ALL">전체</option>
+          <option value="FRUIT">과일</option>
+          <option value="DRINK">음료</option>
+          <option value="SNACK">과자</option>
+          <option value="DAILY">생활</option>
+        </select>
+      </div>
+
+      <!-- 장바구니 열기 버튼 -->
+      <button id="openCartBtn" class="btn">
+        장바구니 <span id="cartCount" class="badge">0</span>
+      </button>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1 class="title">오늘의 상품</h1>
+        <p class="desc">
+          실제 결제는 없고, 주문 내역은 브라우저에만 저장돼요.
+        </p>
+      </section>
+
+      <!-- 상품 카드가 그려질 영역 -->
+      <section id="productGrid" class="grid"></section>
+
+      <!-- 주문 내역 영역 -->
+      <section class="orders">
+        <div class="orders-head">
+          <h2 class="subtitle">최근 주문 내역(학습용)</h2>
+          <button id="clearOrdersBtn" class="btn ghost">주문 내역 지우기</button>
+        </div>
+        <div id="ordersList" class="orders-list"></div>
+      </section>
+    </main>
+
+    <!-- 장바구니 드로어(오른쪽에서 나오는 패널) -->
+    <aside id="cartDrawer" class="drawer hidden">
+      <div class="drawer-head">
+        <h2 class="subtitle">장바구니</h2>
+        <button id="closeCartBtn" class="btn ghost">닫기</button>
+      </div>
+
+      <!-- 장바구니 아이템이 들어갈 영역 -->
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="drawer-foot">
+        <div class="total">
+          <span>총 합계</span>
+          <strong id="cartTotal">0원</strong>
+        </div>
+
+        <button id="checkoutBtn" class="btn primary">주문하기(가짜)</button>
+        <button id="clearCartBtn" class="btn ghost">장바구니 비우기</button>
+
+        <p class="hint">
+          팁: 새로고침해도 장바구니가 남아있는 이유는 localStorage 때문이에요.
+        </p>
+      </div>
+    </aside>
+
+    <!-- 화면 아래에 잠깐 뜨는 알림 -->
+    <div id="toast" class="toast hidden"></div>
+
+    <!-- JS는 body 끝에서 불러오면, 화면이 먼저 만들어지고 실행돼서 안정적 -->
+    <script src="app.js"></script>
+  </body>
 </html>
