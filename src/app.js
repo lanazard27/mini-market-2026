@@ -16,7 +16,7 @@
 // ===== 1) 샘플 상품 데이터(보통은 서버에서 오지만, 지금은 배열로) =====
 const PRODUCTS = [
   { id: 'p1', name: '사과 1kg', price: 5900, category: 'FRUIT', emoji: '🍎' },
-  { id: 'p2', name: '바나나 한 송이', price: 4500, category: 'FRUIT', emoji: '🍌' },
+  { id: 'p2', name: '바나나 한 송이', price: 3200, category: 'FRUIT', emoji: '🍌' },
   { id: 'p3', name: '오렌지 6개', price: 7200, category: 'FRUIT', emoji: '🍊' },
   { id: 'p4', name: '콜라 500ml', price: 1800, category: 'DRINK', emoji: '🥤' },
   { id: 'p5', name: '생수 2L', price: 1200, category: 'DRINK', emoji: '💧' },
@@ -112,43 +112,42 @@ function getFilteredProducts() {
 }
 
 function renderProducts() {
-  const list = getFilteredProducts();
   productGrid.innerHTML = '';
 
-  if (list.length === 0) {
-    const div = document.createElement('div');
-    div.className = 'desc';
-    div.textContent = '검색 결과가 없어요.';
-    productGrid.appendChild(div);
+  const filtered = getFilteredProducts();
+
+  if (filtered.length === 0) {
+    const empty = document.createElement('div');
+    empty.className = 'desc';
+    empty.textContent = '검색 결과가 없어요.';
+    productGrid.appendChild(empty);
     return;
   }
 
-  for (const p of list) {
+  for (const product of filtered) {
     const card = document.createElement('div');
     card.className = 'card';
 
     card.innerHTML = `
-      <div class="thumb">${p.emoji}</div>
+      <div class="thumb">${product.emoji}</div>
       <div class="card-body">
-        <h3 class="card-title">${p.name}</h3>
+        <h3 class="card-title">${product.name}</h3>
         <div class="meta">
-          <span>${categoryName(p.category)}</span>
-          <span class="price">${formatWon(p.price)}</span>
+          <span class="category">${categoryName(product.category)}</span>
+          <span class="price">${formatWon(product.price)}</span>
         </div>
-        <div style="margin-top:10px; display:flex; gap:8px;">
-          <button class="btn primary" data-add="${p.id}">장바구니 담기</button>
-        </div>
+        <button class="btn" style="margin-top:10px; width:100%;" data-add="${product.id}">
+          장바구니에 담기
+        </button>
       </div>
     `;
 
     productGrid.appendChild(card);
   }
 
-  // "담기" 버튼 이벤트 연결
   productGrid.querySelectorAll('[data-add]').forEach((btn) => {
     btn.addEventListener('click', () => {
-      const productId = btn.getAttribute('data-add');
-      addToCart(productId, 1);
+      addToCart(btn.getAttribute('data-add'), 1);
     });
   });
 }
@@ -338,14 +337,16 @@ searchInput.addEventListener('input', renderProducts);
 categorySelect.addEventListener('change', renderProducts);
 
 openCartBtn.addEventListener('click', openCart);
+
 closeCartBtn.addEventListener('click', closeCart);
+
+checkoutBtn.addEventListener('click', checkout);
 
 clearCartBtn.addEventListener('click', () => {
   clearCart();
   showToast('장바구니를 비웠어요.');
 });
 
-checkoutBtn.addEventListener('click', checkout);
 clearOrdersBtn.addEventListener('click', clearOrders);
 
 // ===== 10) 첫 화면 그리기 =====
