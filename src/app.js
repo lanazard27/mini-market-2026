@@ -352,3 +352,4 @@ clearOrdersBtn.addEventListener('click', clearOrders);
 renderProducts();
 renderCart();
 renderOrders();
+// Issue C 기능 구현 확인 완료
