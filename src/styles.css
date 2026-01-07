@@ -74,16 +74,20 @@ body {
 
 /* 버튼 */
 .btn {
-  padding: 10px 12px;
+  padding: 10px 16px;
   border-radius: 12px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.05);
   color: var(--text);
   cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
 }
 
 .btn:hover {
   background: rgba(255, 255, 255, 0.09);
+  transform: translateY(-1px);
 }
 
 .btn.primary {
@@ -143,9 +147,9 @@ body {
 /* 상품 그리드 */
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin-top: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
 }
 
 .card {
@@ -334,22 +338,33 @@ body {
 }
 
 /* 반응형 */
-@media (max-width: 980px) {
+@media (max-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 }
 
 @media (max-width: 520px) {
   .grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .search-area {
     flex-direction: column;
+    gap: 8px;
   }
 
   .select {
     max-width: 100%;
+  }
+
+  .header {
+    padding: 12px;
+  }
+
+  .container {
+    padding: 16px 12px 60px;
   }
 }
