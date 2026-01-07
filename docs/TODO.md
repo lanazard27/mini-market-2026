@@ -7,7 +7,7 @@
 
 ---
 
-## Issue A: HTML 뼈대 (src/index.html만)
+## Issue A: HTML 뼈架 (src/index.html만)
 완료 기준:
 - 아래 id가 HTML에 존재해야 함:
   - searchInput
@@ -50,3 +50,14 @@
 - 스모크 테스트 통과 (npm test)
 - CI(깃허브 액션) 초록불
 - 기능 체크리스트 통과
+
+## 에이전트 작업 순서
+1. **Planner Agent**: 이 Issue들을 GitHub에 생성
+2. **Builder Agent**: 각 Issue를 순서대로 해결하며 PR 생성
+3. **Fixer Agent**: CI 실패 시 자동 수정
+4. **Reviewer Agent**: 최종 검토 및 머지 승인
+
+## 우선순위
+- Issue A → B → C → D 순서로 진행
+- 다음 Issue 시작 전에 이전 Issue의 PR이 머지되었는지 확인
+- CI 실패 시 다음 Issue 진행 중단
